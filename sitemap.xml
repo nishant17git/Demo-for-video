@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This sitemap file conforms to the protocol as described by Google -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <!-- Use the full, canonical URL -->
+    <loc>https://agct.netlify.app/</loc>
+    <!-- The date must be in ISO 8601 format -->
+    <lastmod>2025-02-25T00:00:00+00:00</lastmod>
+    <!-- Optional: How frequently the page is likely to change -->
+    <changefreq>monthly</changefreq>
+    <!-- Optional: The priority of this URL relative to other URLs on your site -->
+    <priority>1.0</priority>
+  </url>
+</urlset>
