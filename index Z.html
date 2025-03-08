@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <div class="logo">
+                <img src="/logo.png" alt="AGCT" />
+              </div>
+
+              <div class="heading">
+                <h2>Register Your Team</h2>
+                <h6>Fill in the form below to register your team.</h6>
+              </div>
+
+              <div class="actual-form">
+                <!-- Required: Your Access Key -->
+                <input type="hidden" name="access_key" value="b55a2fca-50d6-47fa-8983-9ab844a20f54" />
+                <input type="hidden" name="redirect" value="https://agct-register-form.netlify.app/success.html">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    name="team_name"
+                    minlength="2"
+                    maxlength="20"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Team Name (as in STUMPS)</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    name="team_id"
+                    minlength="8"
+                    maxlength="8"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>STUMPS Team ID</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    name="name"
+                    minlength="4"
+                    class="input-field"
+                    required
+                  />
+                  <label>Name</label>
+                </div>
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    name="phone"
+                    pattern="^\d{10}$"
+                    class="input-field"
+                    title="Phone number must be exactly 10 digits."
+                    required
+                  />
+                  <label>Phone No.</label>
+                </div>
+
+
+                <div class="input-wrap">
+                  <input
+                    type="email"
+                    name="email"
+                    pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+                    class="input-field"
+                    title="Email must be a valid @gmail.com address."
+                    required
+                  />
+                  <label>E-mail</label>
+                </div>
+
+                <!-- Payment Section -->
+                <div class="payment-section">
+                  <h3>Payment Section</h3>
+                  <p>Scan the QR code below to pay:</p>
+                  <img
+                    src="https://i.imgur.com/pYcM0rs.png"
+                    alt="Payment QR Code"
+                    width="225"
+                    height="225"
+                  />
+                  <div class="payment-methods">
+                    <a href="#">
+                      <img src="https://i.imgur.com/aq2G9O5.png" alt="PhonePe" width="50" />
+                    </a>
+                    <a href="#">
+                      <img src="https://i.imgur.com/AAUedYq.png" alt="Paytm" width="50" />
+                    </a>
+                    <a href="#">
+                      <img src="https://i.imgur.com/JLHFJaV.png" alt="Google Pay" width="50" />
+                    </a>
+                    <a href="#">
+                      <img src="https://i.imgur.com/9TbA4BW.png" alt="BHIM UPI" width="50" />
+                    </a>
+                  </div>
+                  <p class="note">
+                    <b>Note:</b> After completing your payment, enter the 12-digit
+                    UPI transaction ID below for verification.
+                    </p>
+                  <div class="input-wrap">
+                    <input
+                      type="text"
+                      name="upi_transaction_id"
+                      pattern="^[a-zA-Z0-9]{12}$"
+                      class="input-field"
+                      title="Transaction ID must be exactly 12 characters long and a mix of letters and numbers."
+                      required
+                    />
+                    <label>UPI Transaction ID</label>
+                  </div>
+                </div>
+                <button class="button" type="submit">Register</button>
+                <p class="text">
+                  By registering, I agree to the
+                  <a href="#">Terms & Conditions</a> and
+                  <a href="#">Privacy Policy</a>.
+                </p>
+              </div>
+               <div id="video">
+          <div class="tutorial">
+    <h3>How to Register:</h3>
+    <ol>
+        <li>
+            Download the <strong>STUMPS</strong> app if you haven't already.
+            <div class="download-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.stumps.app" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+                </a>
+                <a href="https://apps.apple.com/app/stumps/id123456789" target="_blank">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                </a>
+            </div>
+        </li>
+        <li>Create your <strong>player profile</strong> in the app.</li>
+        <li>Create a <strong>team</strong> and add your team players.</li>
+        <li>Note down your <strong>Team Name</strong> and <strong>Team ID</strong>.</li>
+        <li>Fill out the registration form with your <strong>Team Name</strong>, <strong>Team ID</strong>, <strong>Your Name</strong>, <strong>Phone Number</strong>, and <strong>Email Address</strong>.</li>
+        <li>Complete the <strong>₹1000</strong> payment via any UPI app (scan QR or click on preferred app).</li>
+        <li>Enter your <strong>12-digit UPI Transaction ID</strong> for verification.</li>
+    </ol>
+    <p class="help-text">Need assistance? Watch the tutorial video below.</p>
+
+<style>
+  .tutorial {
+    margin-top: 20px;
+    color: #fff;
+    padding: 1rem;
+    background: #1a1a1a;
+    border-radius: 1.35rem;
+}
+
+.tutorial h3 {
+    color: #ff00aa;
+    margin-bottom: 1rem;
+    font-family: ind;
+    font-size: 1.1rem;
+}
+
+.tutorial ol {
+    padding-left: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.tutorial li {
+    margin-bottom: 0.8rem;
+    color: #ddd;
+}
+
+.download-buttons {
+    margin-top: -2px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.download-buttons a {
+    display: flex;
+}
+
+.download-buttons a img {
+    width: 100px; /* Ensures equal width */
+    height: 45px; /* Ensures equal height */
+    object-fit: contain; /* Maintains original aspect ratio without stretching */
+}
+
+.help-text {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #ffcc00;
+    text-align: center;
+}
+</style>
+                    <iframe
+                  height="231px"
+                  src="https://www.youtube.com/embed/6jUmvilzR_Q?si=nr3ZmlblfRGh73fQ"
+                  title="AGCT Registration Tutorial"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+                </div>
+                </div>
+              </div>
+            </form>
+            <div class="bottom">
+                <div class="text-group">
+                <h2>Where Cricket Meets Glory</h2>
+              </div>
+          </div>
+            </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

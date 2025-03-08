@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Successful</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    
+    @font-face {
+    font-family: 'ind';
+    src: url('narwa-heavy-webfont.woff2') format('woff2'),
+         url('narwa-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: ind;
+    src: url(/Narwa-Ultra.woff);
+}
+
+@font-face {
+    font-family: cwc;
+    src: url(/Narwa-Bold.woff);
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cwc;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #180533;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .decorative-image {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 15px;
+            opacity: 0.9;
+            transition: transform 3s ease-in-out, top 3s ease-in-out, left 3s ease-in-out;
+            filter: brightness(1.2) drop-shadow(0 0 10px #ff00aa);
+            animation: floatAnimation 5s infinite alternate ease-in-out;
+        }
+
+        .decorative-image:hover {
+            filter: brightness(1.5) drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+            transform: scale(1.1);
+        }
+
+        @keyframes floatAnimation {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 5rem auto 0;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .confirmation-box {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .checkmark {
+            font-size: 4.5rem;
+            color: #4CAF50;
+            margin-bottom: 2rem;
+            animation: scaleUp 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        h1 {
+            font-family: ind;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        p {
+            color: rgba(255,255,255,0.85);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        @keyframes scaleUp {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .decorative-image {
+                width: 60px;
+                height: 60px;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="confirmation-box">
+            <i class="fas fa-check-circle checkmark"></i>
+            <h1>Submission Confirmed!</h1>
+            <p>Your team details have been successfully submitted. <br />Our team will review your submission and contact you within 12 to 24 business hours via the provided phone number.</p>
+            <p>If you have any questions or need help, please reach out to us!</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = [
+                'https://i.imgur.com/NmwmXdR.jpeg',
+                'https://i.imgur.com/oIu6iXU.jpeg',
+                'https://i.imgur.com/LQ5RnLc.jpeg',
+                'https://i.imgur.com/N5aSg4d.jpeg',
+                'https://i.imgur.com/xbz4AA4.jpeg',
+                'https://i.imgur.com/BgrXWRI.jpeg',
+                'https://i.imgur.com/km6VTEt.jpeg',
+                'https://i.imgur.com/oRPdGBo.jpeg',
+                'https://i.imgur.com/SqHl3J9.jpeg'
+            ];
+
+            const imageCount = 36; // Number of scattered images
+            const fragment = document.createDocumentFragment();
+
+            const getRandomPosition = () => ({
+                x: Math.random() * (window.innerWidth - 100),
+                y: Math.random() * (window.innerHeight - 100)
+            });
+
+            const getSlightlyMovedPosition = (currentX, currentY) => ({
+                x: Math.min(window.innerWidth - 100, Math.max(0, currentX + (Math.random() * 30 - 15))),
+                y: Math.min(window.innerHeight - 100, Math.max(0, currentY + (Math.random() * 30 - 15)))
+            });
+
+            const moveImages = () => {
+                document.querySelectorAll('.decorative-image').forEach(img => {
+                    const newPos = getSlightlyMovedPosition(parseFloat(img.style.left), parseFloat(img.style.top));
+                    img.style.top = `${newPos.y}px`;
+                    img.style.left = `${newPos.x}px`;
+                });
+            };
+
+            for (let i = 0; i < imageCount; i++) {
+                const img = new Image();
+                img.className = 'decorative-image';
+                img.src = images[i % images.length];
+
+                const pos = getRandomPosition();
+                img.style.top = `${pos.y}px`;
+                img.style.left = `${pos.x}px`;
+
+                fragment.appendChild(img);
+            }
+
+            document.body.appendChild(fragment);
+
+            // Move images continuously with a very smooth transition
+            setInterval(moveImages, 3000);
+        });
+    </script>
+</body>
+</html>
