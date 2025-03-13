@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams | AGCT | Official</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .teams-container {
+            background-color: #2e0052;
+            min-height: 100vh;
+            padding: 100px 20px;
+            color: white;
+        }
+
+        .teams-heading {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            background-color: #2e0052;
+            border-radius: 25px;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-flag {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 40px;
+            background: white;
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .team-flag img {
+            width: 85%;
+            height: 85%;
+            object-fit: contain;
+        }
+
+        .team-card h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .team-info p {
+            margin: 15px 0;
+            font-size: 1.4rem;
+            color: #8e8e8e;
+        }
+
+        .highest-finish {
+            margin: 25px 0 10px !important;
+            font-size: 1.2rem !important;
+            color: #8e8e8e !important;
+        }
+
+        .team-profile-btn {
+            display: inline-block;
+            background-color: white;
+            color: #2e0052;
+            padding: 15px 50px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 30px;
+            text-decoration: none;
+        }
+
+        .corner-design {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .corner-design::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff0066, #00b4ff);
+            clip-path: polygon(0 100%, 100% 100%, 0 0);
+        }
+
+        .corner-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .corner-stars {
+            position: absolute;
+            bottom: 40px;
+            left: 20px;
+        }
+
+        .star {
+            width: 25px;
+            height: 25px;
+            background: #00b4ff;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Rest of the HTML remains unchanged -->
+    <!-- Navigation Bar (copied from main site) -->
+    <div class="nav-container">
+        <nav>
+            <ul class="mobile-nav">
+                <li>
+                    <div class="menu-icon-container">
+                        <div class="menu-icon">
+                            <span class="line-1"></span>
+                            <span class="line-2"></span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="agct_2025.png" alt="AGCT Logo" class="agct-logo" id="logo" />
+                </li>
+                <li>
+                    <a href="#" class="register">COMING SOON!</a>
+                </li>
+            </ul>
+            <ul class="desktop-nav">
+                <li><a href="https://stumpsapp.com/cric/dKEZ">Overview</a></li>
+                <li><a href="Standing.html">Format <strong>&</strong> Rules</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="Standing.html">Matches</a></li>
+                <li><a href="Standing.html">Standing</a></li>
+                <li><a href="Standing.html">Fixtures</a></li>
+                <li><a href="Standing.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Teams Section -->
+    <div class="teams-container">
+        <h1 class="teams-heading">AGCT TEAMS</h1>
+        
+        <div class="team-grid">
+            <!-- Team 1 -->
+            <div class="team-card">
+                <div class="team-flag">
+                    <img src="agct_2025.png" alt="Team 1">
+                </div>
+                <h2>THUNDER STRIKERS</h2>
+                <div class="team-info">
+                    <p class="ranking">ODI RANKING: 1</p>
+                    <p class="highest-finish">HIGHEST FINISH</p>
+                    <p class="finish-result">CHAMPIONS</p>
+                </div>
+                <a href="team1-profile.html" class="team-profile-btn">TEAM PROFILE</a>
+                <div class="corner-design">
+                    <div class="blue-section"></div>
+                    <div class="corner-stairs">
+                        <div class="stair"></div>
+                        <div class="stair"></div>
+                        <div class="stair"></div>
+                        <div class="stair"></div>
+                    </div>
+                    <div class="corner-stars">
+                        <div class="star"></div>
+                        <div class="star"></div>
+                    </div>
+                    <div class="dots-line">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team 2 -->
+            <div class="team-card">
+                <div class="team-flag">
+                    <img src="agct_2025.png" alt="Team 2">
+                </div>
+                <h2>ROYAL PHOENIX</h2>
+                <div class="team-info">
+                    <p class="ranking">ODI RANKING: 2</p>
+                    <p class="highest-finish">HIGHEST FINISH</p>
+                    <p class="finish-result">RUNNERS UP</p>
+                </div>
+                <a href="team2-profile.html" class="team-profile-btn">TEAM PROFILE</a>
+                <div class="corner-design">
+                    <div class="blue-section"></div>
+                    <div class="corner-stairs">
+                        <div class="stair"></div>
+                        <div class="stair"></div>
+                        <div class="stair"></div>
+                        <div class="stair"></div>
+                    </div>
+                    <div class="corner-stars">
+                        <div class="star"></div>
+                        <div class="star"></div>
+                    </div>
+                    <div class="dots-line">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team 3 -->
+            <div class="team-card">
+                <div class="team-flag">
+                    <img src="agct_2025.png" alt="Team 3">
+                </div>
+                <h2>VICTORY TITANS</h2>
+                <div class="team-info">
+                    <p class="ranking">ODI RANKING: 3</p>
+                    <p class="highest-finish">HIGHEST FINISH</p>
+                    <p class="finish-result">SEMI-FINALS</p>
+                </div>
+                <a href="team3-profile.html" class="team-profile-btn">TEAM PROFILE</a>
+                <div class="corner-design">
+                    <div class="blue-section"></div>
+                    <div class="corner-stairs">
+                        <div class="stair"></div>
+                        <div class="stair"></div>
+                        <div class="stair"></div>
+                        <div class="stair"></div>
+                    </div>
+                    <div class="corner-stars">
+                        <div class="star"></div>
+                        <div class="star"></div>
+                    </div>
+                    <div class="dots-line">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team 4 -->
+            <div class="team-card">
+                <div class="team-flag">
+                    <img src="agct_2025.png" alt="Team 4">
+                </div>
+                <h2>IMPERIAL KNIGHTS</h2>
+                <div class="team-info">
+                    <p class="ranking">ODI RANKING: 4</p>
+                    <p class="highest-finish">HIGHEST FINISH</p>
+                    <p class="finish-result">QUARTER-FINALS</p>
+                </div>
+                <a href="team4-profile.html" class="team-profile-btn">TEAM PROFILE</a>
+                <div class="corner-design">
+                    <div class="blue-section"></div>
+                    <div class="corner-stairs">
+                        <div class="stair"></div>
+                        <div class="stair"></div>
+                        <div class="stair"></div>
+                        <div class="stair"></div>
+                    </div>
+                    <div class="corner-stars">
+                        <div class="star"></div>
+                        <div class="star"></div>
+                    </div>
+                    <div class="dots-line">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .teams-container {
+            background-color: #2e0052;
+            min-height: 100vh;
+            padding: 100px 20px;
+            color: white;
+        }
+
+        .team-card {
+            background-color: #2e0052;
+            border-radius: 25px;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .corner-design {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+        }
+
+        .corner-image {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dots {
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+            display: flex;
+            gap: 8px;
+            z-index: 2;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        .stars {
+            position: absolute;
+            bottom: 50px;
+            left: 20px;
+            z-index: 2;
+        }
+
+        .star-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        .team-info {
+            margin: 30px 0;
+        }
+
+        .style>
+            @font-face {
+                font-family: 'Narwa-Ultra';
+                src: url('fonts/Narwa-Ultra.woff') format('woff');
+            }
+        
+            @font-face {
+                font-family: 'Narwa-Bold';
+                src: url('fonts/Narwa-Bold.woff') format('woff');
+            }
+        
+            /* Update text styles */
+            .team-card h2 {
+                font-family: 'Narwa-Ultra', sans-serif;
+                font-size: 2rem;
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+            }
+        
+            .team-info p {
+                font-family: 'Narwa-Bold', sans-serif;
+                margin: 10px 0;
+                font-size: 1rem;
+            }
+        
+            .ranking {
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+        
+            .highest-finish {
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 0.9rem !important;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin: 10px 0 !important;
+            }
+        
+            .finish-result {
+                font-family: 'Narwa-Ultra', sans-serif;
+                color: white;
+                font-size: 1.4rem;
+                margin-top: 5px;
+            }
+        
+            .team-profile-btn {
+                font-family: 'Narwa-Bold', sans-serif;
+                font-size: 1rem;
+                padding: 12px 35px;
+            }
+        
+            .teams-heading {
+                font-family: 'Narwa-Ultra', sans-serif;
+                font-size: 2.5rem;
+            }
+        </style>
+        .team-profile-btn {
+            background-color: #ff0066;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-profile-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Add before the closing body tag
+        document.querySelector('.menu-icon-container').addEventListener('click', function() {
+            document.querySelector('.desktop-nav').classList.toggle('active');
+            const menuIcon = document.querySelector('.menu-icon');
+            menuIcon.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
