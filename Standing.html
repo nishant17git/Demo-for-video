@@ -75,7 +75,7 @@
       animation: fadeUp 0.8s ease forwards 0.8s;
     }
 
-    /* Button Styling */
+    /* Button Styling with fade-up animation */
     .btn-home {
       padding: 12px 24px;
       font-size: 16px;
@@ -88,6 +88,9 @@
       transition: transform 0.3s ease;
       text-decoration: none;
       display: inline-block;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease forwards 1s;
     }
     .btn-home:hover {
       transform: scale(1.05);
