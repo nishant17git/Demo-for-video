@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     
     Project.addEventListener("click", function(){
-        desc.textContent = "The number of participating teams will be confirmed after the registration period, starting March 10, 2025. Once the registration process is complete, the official list of teams will be announced, showcasing the talented squads set to compete in the AGCT Men’s Cricket Test Championship. Each team will battle it out in the Round Robin format, aiming for a spot in the highly anticipated final.";
+        desc.textContent = "The registration period for the AGCT Men’s Cricket Test Championship has now started and will end on 19th March. A total of 3 teams will be registered for the tournament. Once the registration process is complete, the official list of teams will be revealed, showcasing the talented squads set to compete. Each team will battle it out in the Round Robin format, striving for a spot in the highly anticipated final.;
         var add = Project.getAttribute("data-img");
         image.setAttribute("src", `${add}`);
         Project.style.right = "2vw";
