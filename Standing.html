@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Soon | AGCT</title>
+  <title>Standing | AGCT</title>
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -46,7 +46,7 @@
 
     /* Main Content */
     .coming-soon {
-      height: 80vh;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -57,9 +57,9 @@
       text-align: center;
     }
 
-    /* Emoji Styling - Enlarged and Centered */
+    /* Emoji Styling - Much Larger */
     .emoji {
-      font-size: 200px;
+      font-size: 250px;
       margin-bottom: 40px;
       position: relative;
       animation: float 6s ease-in-out infinite;
@@ -74,7 +74,7 @@
       bottom: -20px;
       left: 50%;
       transform: translateX(-50%);
-      width: 80px;
+      width: 100px;
       height: 12px;
       background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%, transparent 70%);
       border-radius: 50%;
@@ -132,80 +132,6 @@
     .decorative-line::before { left: 0; }
     .decorative-line::after { right: 0; }
 
-    /* Footer */
-    #footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 30px 0;
-      background: rgba(15, 23, 42, 0.9);
-      backdrop-filter: blur(20px);
-      border-top: 1px solid rgba(255,255,255,0.1);
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.8s ease;
-      z-index: 2;
-    }
-    #footer.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .footer-content-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .full-width-image img {
-      width: 100%;
-      max-width: 300px;
-      display: block;
-      margin: 0 auto;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-    }
-    #footerupper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 5%;
-      flex-wrap: wrap;
-    }
-    .contact-section h6 {
-      margin: 5px 0;
-      font-size: 16px;
-      color: #fff;
-    }
-    .social-icons {
-      display: flex;
-      gap: 20px;
-    }
-    .social-icons a {
-      transition: transform 0.3s ease;
-    }
-    .social-icons a:hover {
-      transform: scale(1.2);
-    }
-    .social-icons svg {
-      width: 24px;
-      height: 24px;
-      fill: #fff;
-    }
-    #footerlower {
-      text-align: center;
-      padding: 20px 0;
-    }
-    #footerlower img {
-      max-width: 150px;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-    }
-    #footerlower img:hover {
-      transform: scale(1.05);
-    }
-
     /* Material Symbols Custom Style */
     .material-symbols-outlined {
       font-variation-settings:
@@ -254,7 +180,7 @@
         font-size: 26px;
       }
       .emoji {
-        font-size: 250px;
+        font-size: 300px;
       }
       .sub-message {
         font-size: 16px;
@@ -276,24 +202,6 @@
       We appreciate your support while we prepare something amazing for you.
     </div>
     <div class="decorative-line"></div>
-  </div>
-
-  <div id="footer">
-    <div class="footer-content-wrapper">
-      <div class="full-width-image">
-        <img src="wcmg.png" alt="WCMG" />
-      </div>
-      <div id="footerupper">
-        <div class="contact-section">
-          <h6>Contact Us</h6>
-          <h6><strong>+</strong>91 89690 91789</h6>
-          <h6>agct.official<strong>＠</strong>gmail.com</h6>
-        </div>
-        <div class="social-icons">
-          <!-- Your social icons here -->
-        </div>
-      </div>
-    </div>
   </div>
 </body>
 </html>
