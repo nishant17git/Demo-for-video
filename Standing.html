@@ -29,6 +29,10 @@
       height: 100vh;
       overflow: hidden;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
     body::before {
       content: '';
@@ -44,48 +48,15 @@
 
     /* Main Content */
     .coming-soon {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
+      max-width: 700px;
+      padding: 20px;
       z-index: 1;
-      padding: 0 20px;
-      text-align: center;
     }
-
-    /* Emoji Styling - Using inline SVG */
-    .emoji {
-      margin-bottom: 40px;
-      position: relative;
-      animation: float 6s ease-in-out infinite;
-    }
-    /* Style the inline SVG directly */
-    .emoji svg {
-      width: 250px;
-      height: 250px;
-      fill: currentColor;
-    }
-    .emoji::after {
-      content: '';
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 12px;
-      background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%, transparent 70%);
-      border-radius: 50%;
-      animation: shadow 6s ease-in-out infinite;
-    }
-
+    
     /* Message Styles */
     .message {
       font-family: ind, sans-serif;
       font-size: 32px;
-      max-width: 700px;
-      line-height: 1.6;
       margin-bottom: 20px;
       background: linear-gradient(90deg, #FE00AA, #ef53e0);
       -webkit-background-clip: text;
@@ -98,62 +69,36 @@
     .sub-message {
       font-size: 18px;
       color: #0f172a;
-      max-width: 600px;
-      line-height: 1.8;
       margin-bottom: 30px;
       opacity: 0;
       transform: translateY(30px);
       animation: fadeUp 0.8s ease forwards 0.8s;
     }
 
-    /* Decorative Line */
-    .decorative-line {
-      width: 150px;
-      height: 3px;
-      background: #180533;
-      margin: 40px auto;
-      opacity: 0;
-      animation: expand 0.8s ease forwards 1s;
-      position: relative;
+    /* Button Styling */
+    .btn-home {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(90deg, #FE00AA, #ef53e0);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
     }
-    .decorative-line::before,
-    .decorative-line::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #60a5fa;
-      top: 50%;
-      transform: translateY(-50%);
-      animation: pulse 2s ease-in-out infinite;
+    .btn-home:hover {
+      transform: scale(1.05);
     }
-    .decorative-line::before { left: 0; }
-    .decorative-line::after { right: 0; }
 
     /* Animations */
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
     @keyframes fadeUp {
       to {
         opacity: 1;
         transform: translateY(0);
       }
-    }
-    @keyframes expand {
-      from { width: 0; opacity: 0; }
-      to { width: 100px; opacity: 1; }
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
-    @keyframes shadow {
-      0%, 100% { opacity: 0.5; }
-      50% { opacity: 1; }
     }
 
     /* Responsive Adjustments */
@@ -161,29 +106,25 @@
       .message {
         font-size: 26px;
       }
-      .emoji svg {
-        width: 300px;
-        height: 300px;
-      }
       .sub-message {
         font-size: 16px;
+      }
+      .btn-home {
+        font-size: 14px;
+        padding: 10px 20px;
       }
     }
   </style>
 </head>
 <body>
   <div class="coming-soon">
-    <!-- Inline SVG file used as the emoji -->
-    <div class="emoji">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M620-520q25 0 42.5-17.5T680-580q0-25-17.5-42.5T620-640q-25 0-42.5 17.5T560-580q0 25 17.5 42.5T620-520Zm-280 0q25 0 42.5-17.5T400-580q0-25-17.5-42.5T340-640q-25 0-42.5 17.5T280-580q0 25 17.5 42.5T340-520Zm140 100q-68 0-123.5 38.5T276-280h66q22-37 58.5-58.5T480-360q43 0 79.5 21.5T618-280h66q-25-63-80.5-101.5T480-420Zm0 340q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z"/></svg>
-    </div>
     <div class="message">
       Thank you for your patience!
     </div>
     <div class="sub-message">
       We appreciate your support while we prepare something amazing for you.
     </div>
-    <div class="decorative-line"></div>
+    <a href="https://agct.vercel.app" class="btn-home">Return to Home</a>
   </div>
 </body>
 </html>
